@@ -22,6 +22,6 @@
     "tvos": "9.0"
   },
   "xcconfig": {
-    "HEADER_SEARCH_PATHS": "\"${PODS_ROOT}/AFNetworking/AFNetworking.framework/Versions/A/Headers\""
+    "HEADER_SEARCH_PATHS": "\"${PODS_ROOT}/AFNetworking/AFNetworking/AFNetworking.framework/Versions/A/Headers\""
   }
 }
