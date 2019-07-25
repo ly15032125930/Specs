@@ -8,75 +8,19 @@
     "August Mueller": "gus@flyingmeat.com"
   },
   "source": {
-    "git": "https://github.com/ccgus/fmdb.git",
-    "tag": "2.7.5"
+    "git": "https://github.com/ly15032125930/FakeFrameworks.git",
+    "tag": "3.1.0"
+  },
+  "vendored_frameworks": "FMDB/FMDB.framework",
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": "\"${PODS_ROOT}/FMDB/FMDB/FMDB.framework/Versions/A/Headers\""
   },
   "requires_arc": true,
-  "default_subspecs": "standard",
   "platforms": {
     "osx": null,
     "ios": null,
     "tvos": null,
     "watchos": null
   },
-  "subspecs": [
-    {
-      "name": "standard",
-      "libraries": "sqlite3",
-      "source_files": "src/fmdb/FM*.{h,m}",
-      "exclude_files": "src/fmdb.m"
-    },
-    {
-      "name": "FTS",
-      "source_files": "src/extra/fts3/*.{h,m}",
-      "dependencies": {
-        "FMDB/standard": [
 
-        ]
-      }
-    },
-    {
-      "name": "standalone",
-      "xcconfig": {
-        "OTHER_CFLAGS": "$(inherited) -DFMDB_SQLITE_STANDALONE"
-      },
-      "dependencies": {
-        "sqlite3": [
-
-        ]
-      },
-      "source_files": "src/fmdb/FM*.{h,m}",
-      "exclude_files": "src/fmdb.m"
-    },
-    {
-      "name": "standalone-fts",
-      "xcconfig": {
-        "OTHER_CFLAGS": "$(inherited) -DFMDB_SQLITE_STANDALONE"
-      },
-      "source_files": [
-        "src/fmdb/FM*.{h,m}",
-        "src/extra/fts3/*.{h,m}"
-      ],
-      "exclude_files": "src/fmdb.m",
-      "dependencies": {
-        "sqlite3/fts": [
-
-        ]
-      }
-    },
-    {
-      "name": "SQLCipher",
-      "dependencies": {
-        "SQLCipher": [
-
-        ]
-      },
-      "source_files": "src/fmdb/FM*.{h,m}",
-      "exclude_files": "src/fmdb.m",
-      "xcconfig": {
-        "OTHER_CFLAGS": "$(inherited) -DSQLITE_HAS_CODEC -DHAVE_USLEEP=1",
-        "HEADER_SEARCH_PATHS": "SQLCipher"
-      }
-    }
-  ]
 }

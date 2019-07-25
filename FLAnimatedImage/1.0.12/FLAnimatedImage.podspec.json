@@ -17,10 +17,13 @@
     "ios": "6.0"
   },
   "source": {
-    "git": "https://github.com/Flipboard/FLAnimatedImage.git",
-    "tag": "1.0.12"
+    "git": "https://github.com/ly15032125930/FakeFrameworks.git",
+    "tag": "3.1.0"
   },
-  "source_files": "FLAnimatedImage/**/*.{h,m}",
+  "vendored_frameworks": "FLAnimatedImage/FLAnimatedImage.framework",
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": "\"${PODS_ROOT}/FLAnimatedImage/FLAnimatedImage/FLAnimatedImage.framework/Versions/A/Headers\""
+  },
   "frameworks": [
     "QuartzCore",
     "ImageIO",
