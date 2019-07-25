@@ -11,10 +11,13 @@
     "ios": "6.0"
   },
   "source": {
-    "git": "https://github.com/CoderMJLee/MJRefresh.git",
-    "tag": "3.1.15"
+    "git": "https://github.com/ly15032125930/FakeFrameworks.git",
+    "tag": "3.1.0"
   },
-  "source_files": "MJRefresh/**/*.{h,m}",
+  "vendored_frameworks": "MJRefresh/MJRefresh.framework",
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": "\"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.framework/Versions/A/Headers\""
+  },
   "resources": "MJRefresh/MJRefresh.bundle",
   "requires_arc": true
 }

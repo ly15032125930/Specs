@@ -6,10 +6,13 @@
   "authors": "Square",
   "license": "Apache License, Version 2.0",
   "source": {
-    "git": "https://github.com/square/SocketRocket.git",
-    "tag": "0.5.1"
+    "git": "https://github.com/ly15032125930/FakeFrameworks.git",
+    "tag": "3.1.0"
   },
-  "source_files": "SocketRocket/*.{h,m}",
+  "vendored_frameworks": "SocketRocket/SocketRocket.framework",
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": "\"${PODS_ROOT}/SocketRocket/SocketRocket/SocketRocket.framework/Versions/A/Headers\""
+  },
   "requires_arc": true,
   "platforms": {
     "ios": "6.0",

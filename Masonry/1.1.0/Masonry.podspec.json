@@ -9,11 +9,14 @@
   },
   "social_media_url": "http://twitter.com/cloudkite",
   "source": {
-    "git": "https://github.com/cloudkite/Masonry.git",
-    "tag": "v1.1.0"
+    "git": "https://github.com/ly15032125930/FakeFrameworks.git",
+    "tag": "3.1.0"
   },
   "description": "Masonry is a light-weight layout framework which wraps AutoLayout with a nicer syntax.\nMasonry has its own layout DSL which provides a chainable way of describing your\nNSLayoutConstraints which results in layout code which is more concise and readable.\n   Masonry supports iOS and Mac OSX.",
-  "source_files": "Masonry/*.{h,m}",
+  "vendored_frameworks": "Masonry/Masonry.framework",
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": "\"${PODS_ROOT}/Masonry/Masonry/Masonry.framework/Versions/A/Headers\""
+  },
   "ios": {
     "frameworks": [
       "Foundation",

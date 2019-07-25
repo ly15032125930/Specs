@@ -14,8 +14,8 @@
     "Antoine Cœur": null
   },
   "source": {
-    "git": "https://github.com/ZipArchive/ZipArchive.git",
-    "tag": "v2.1.1"
+    "git": "https://github.com/ly15032125930/FakeFrameworks.git",
+    "tag": "3.1.0"
   },
   "platforms": {
     "ios": "4.0",
@@ -23,11 +23,9 @@
     "osx": "10.8",
     "watchos": "2.0"
   },
-  "source_files": [
-    "SSZipArchive/*.{m,h}",
-    "SSZipArchive/minizip/*.{c,h}",
-    "SSZipArchive/minizip/aes/*.{c,h}"
-  ],
-  "public_header_files": "SSZipArchive/*.h",
+  "vendored_frameworks": "SSZipArchive/SSZipArchive.framework",
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": "\"${PODS_ROOT}/SSZipArchive/SSZipArchive/SSZipArchive.framework/Versions/A/Headers\""
+  },
   "libraries": "z"
 }
