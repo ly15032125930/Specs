@@ -36,5 +36,66 @@
   "vendored_frameworks": "Texture/Texture.framework",
   "xcconfig": {
     "HEADER_SEARCH_PATHS": "\"${PODS_ROOT}/Texture/Texture/Texture.framework/Versions/A/Headers\""
-  }
+  },
+  "subspecs": [
+    {
+      "name": "Core",
+      "public_header_files": [
+        "Source/*.h",
+        "Source/Details/**/*.h",
+        "Source/Layout/**/*.h",
+        "Source/Base/*.h",
+        "Source/Debug/**/*.h",
+        "Source/TextKit/ASTextNodeTypes.h",
+        "Source/TextKit/ASTextKitComponents.h"
+      ],
+      "source_files": [
+        "Source/**/*.{h,m,mm}",
+        "Base/*.{h,m}",
+        "Source/TextKit/*.h"
+      ],
+      "xcconfig": {
+        "GCC_PRECOMPILE_PREFIX_HEADER": "YES"
+      }
+    },
+    {
+      "name": "PINRemoteImage",
+      "dependencies": {
+        "PINRemoteImage/iOS": [
+          "= 3.0.0-beta.13"
+        ],
+        "PINRemoteImage/PINCache": [
+
+        ],
+        "Texture/Core": [
+
+        ]
+      }
+    },
+    {
+      "name": "IGListKit",
+      "dependencies": {
+        "IGListKit": [
+          "3.0.0"
+        ],
+        "Texture/Core": [
+
+        ]
+      }
+    },
+    {
+      "name": "Yoga",
+      "xcconfig": {
+        "GCC_PREPROCESSOR_DEFINITIONS": "$(inherited) YOGA=1"
+      },
+      "dependencies": {
+        "Yoga": [
+          "1.6.0"
+        ],
+        "Texture/Core": [
+
+        ]
+      }
+    }
+  ]
 }
